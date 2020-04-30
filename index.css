@@ -1,0 +1,83 @@
+.page {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  width: 95%;
+  max-width: 800px;
+  background-color: beige;
+}
+
+.registration {
+  display: flex;
+  flex-direction: column;
+
+  width: 80%;
+  margin: auto;
+}
+
+.registration__row {
+  display: flex;
+  flex-direction: row;
+
+  height: 3.5vh;
+  margin: 3% 0;
+}
+
+.registration__label {
+  width: 30%;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.registration__input {
+  width: 70%;
+  justify-content: space-around;
+  border-radius: 5px;
+  border: 2px solid gainsboro;
+  padding: 1% 1%;
+}
+
+.registration__row_nontext {
+  justify-content: flex-start;
+  align-self: flex-end;
+  width: 70%;
+  margin: 0.5%;
+}
+
+.registration__checkbox {
+  margin: 0;
+  font-size: smaller;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.checkbox__text {
+  margin: auto;
+}
+
+.checkbox__box {
+  margin: auto;
+}
+
+.registration__row_nontext_cta {
+  justify-content: center;
+  align-self: flex-end;
+  width: 70%;
+  margin: 0.5%;
+}
+
+.registration__cta {
+  border: 2px solid lightslategray;
+  border-radius: 5px;
+  height: 5vh;
+  width: 20%;
+  font-size: large;
+}
+
+.registration__cta:hover {
+  background-color: lightslategray;
+  color: white;
+}
