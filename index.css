@@ -1,45 +1,42 @@
 .page {
   display: flex;
   justify-content: center;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 0, 0, 0.589),
+    rgba(0, 0, 255, 0.589)
+  );
 }
 
 .display {
   width: 95%;
   max-width: 1000px;
-  background-color: aliceblue;
 }
 
 .header {
-  display: flex;
-  background-color: gainsboro;
-  height: 8vh;
+  background-color: rgba(63, 63, 63, 0.438);
+  border: 1px black;
+  border-style: inset solid solid inset;
 }
 
-.nav {
+.nav__list {
+  padding: 0 0;
   display: flex;
-  flex-direction: row;
   list-style: none;
-  width: 100%;
-  justify-content: space-between;
-  margin: auto 0;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.nav__list_left {
-  width: 30%;
-  align-self: flex-start;
-  justify-content: space-around;
-}
-
-.nav__list_right {
-  align-self: flex-end;
-  justify-content: space-around;
-  width: 20%;
+.nav__item {
+  display: flex;
+  flex: 1 1 100px;
+  justify-content: center;
 }
 
 .nav__link {
-  color: lightslategray;
+  color: rgb(177, 188, 199);
   text-decoration: none;
-  font-size: large;
 }
 
 .nav__link:hover {
@@ -49,8 +46,7 @@
 .nav__cta {
   border: 2px solid slategray;
   border-radius: 5px;
-  height: 3.5vh;
-  width: 4vw;
+  height: 3vh;
 }
 
 .nav__cta:hover {
@@ -91,10 +87,11 @@
   z-index: 1;
   height: 55%;
   width: 75%;
-  max-width: 600px;
+  max-width: 500px;
   padding: 2%;
   background-color: rgb(0, 0, 0);
-  background-color: rgba(139, 139, 139, 0.9);
+  background-color: rgba(235, 235, 235, 0.35);
+  border-radius: 5px;
 }
 
 .modal__header {
