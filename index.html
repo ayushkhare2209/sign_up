@@ -38,8 +38,9 @@
       </footer>
 
       <div class="modal">
+        <span class="modal__close">&times;</span>
         <div class="modal__header">
-          Sign up to get started
+          <span>Sign up to get started</span>
         </div>
         <form class="modal__form">
           <div class="modal__row modal__row_credentials">
@@ -134,9 +135,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script>
     const modal = $(".modal");
+    // show modal
     $(".nav__cta_sign-up").click(() => {
-      console.log("hello");
       modal.show();
+    });
+    // hide modal
+    $(".modal__close").click(() => {
+      modal.hide();
     });
   </script>
 </html>
