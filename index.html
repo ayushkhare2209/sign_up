@@ -26,7 +26,94 @@
         </nav>
       </header>
       <div class="modal">
-        
+        <div class="modal__content">
+        <div class="modal__close">&times;</div>
+        <div class="modal__title">Sign Up to gain access</div>
+          <form class="registration__form">
+            <div class="registration__row">
+              <label class="registration__label" for="first-name">
+                First Name*
+              </label>
+              <input
+                class="registration__input"
+                name="first-name"
+                type="text"
+                placeholder="First Name..."
+              />
+            </div>
+            <div class="registration__row">
+              <label class="registration__label" for="last-name">
+                Last Name*
+              </label>
+              <input
+                class="registration__input"
+                name="last-name"
+                type="text"
+                placeholder="Last Name..."
+              />
+            </div>
+            <div class="registration__row">
+              <label class="registration__label" for="registration-email">Email*</label>
+              <input
+                class="registration__input"
+                name="registration-email"
+                type="email"
+                placeholder="Email..."
+              />
+            </div>
+            <div class="registration__row">
+              <label class="registration__label" for="registration-password"
+              >Password*</label
+            >
+            <input
+              class="registration__input"
+              name="registration-password"
+              type="password"
+              placeholder="Password..."
+            />
+            </div>
+            <div class="registration__row">
+              <label class="registration__label" for="registration-password-confirm"
+              >Confirm Password*</label
+            >
+            <input
+              class="registration__input"
+              name="registration-password-confirm"
+              type="password"
+              placeholder="Confirm Password..."
+            />
+            </div>
+            <div class="registration__row">
+              <div class="registration__checks">
+                <label class="registration__checkbox">
+                  <input class="checkbox__box" type="checkbox" />
+                  <span class="checkbox__text">
+                    &nbsp;&nbsp;Receive emails with promotions and service
+                    updates?
+                  </span>
+                </label>
+                <label class="registration__checkbox">
+                  <input class="checkbox__box" type="checkbox" />
+                  <span class="checkbox__text">
+                    &nbsp;&nbsp;Share data with developers to help monitor
+                    performance?
+                  </span>
+                </label>
+              </div>  
+            </div>
+            <div class="registration__row">
+              <button class="registration__cta">Register!</button>
+            </div>
+            <div class="registration__row">
+              <span class="registration__notice"
+              >By clicking "Register", you agree to our
+              <a class="notice__link" href="#">terms of service</a>,
+              <a class="notice__link" href="#">privacy policy</a> and
+              <a class="notice__link" href="#">cookie policy</a></span
+            >
+            </div>
+          </form>
+        </div>
       </div>
 
       
@@ -35,8 +122,11 @@
   <script>
     const modal = $(".modal");
     $(".nav__cta_sign-up").click(() => {
-      console.log("hello");
       modal.show();
     });
+
+    $(".modal__close").click(() => {
+      modal.hide();
+    })
   </script>
 </html>

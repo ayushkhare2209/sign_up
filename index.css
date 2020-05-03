@@ -55,28 +55,6 @@
   cursor: pointer;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  height: 90vh;
-}
-
-.content__container {
-  display: flex;
-
-  height: 50%;
-  overflow: hidden;
-}
-
-.content__container_red {
-  background-color: rgb(240, 174, 174);
-}
-
-.content__container_blue {
-  background-color: rgba(188, 222, 233, 0.781);
-}
-
 .modal {
   font-size: 0.9rem;
   display: none;
@@ -94,6 +72,31 @@
   border-radius: 5px;
 }
 
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.modal__title {
+  align-self: center;
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.modal__close:hover {
+  cursor: pointer;
+  color: rgba(119, 136, 153, 0.459);
+}
+
 .modal__header {
   align-self: center;
   text-align: center;
@@ -101,60 +104,39 @@
   width: 50%;
 }
 
-.modal__form {
+.registration__form {
   display: flex;
+  height: 80%;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.modal__row {
-  width: 100%;
+.registration__row {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.modal__row_credentials {
-  height: 6.5vh;
+.registration__label {
+  flex: 1 4 15%;
 }
 
-.modal__row_nontext {
-  justify-content: flex-end;
-  margin: 0 0;
-}
-
-.modal__row_cta {
-  align-self: center;
-}
-
-.modal__row_notice {
-  justify-content: center;
-}
-
-.modal__input {
-  height: 50%;
-
+.registration__input {
+  flex: 1 2 55%;
+  height: 2.5vh;
+  border: 2px solid rgba(119, 136, 153, 0.61);
   border-radius: 5px;
-  border: 2px solid rgba(119, 136, 153, 0.459);
-  padding: 0 1%;
 }
 
-.modal__checks {
-  margin: 1%;
-}
-
-.modal__checkbox {
+.registration__checks {
   display: flex;
-  justify-content: flex-start;
-  margin: auto 0;
-  font-size: 70%;
+  flex-direction: column;
+  font-size: 75%;
+  align-content: flex-end;
 }
 
-.checkbox__text {
-  margin: auto 0;
-}
-
-.modal__cta {
+.registration__cta {
   border: 2px solid lightslategray;
   border-radius: 5px;
   height: 4vh;
@@ -162,13 +144,20 @@
   margin: auto;
 }
 
-.modal__cta:hover {
+.registration__cta:hover {
   background-color: lightslategray;
   color: white;
   cursor: pointer;
 }
 
-.modal__notice {
+.registration .modal__row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.registration__notice {
   width: 75%;
   text-align: center;
   font-size: 70%;
